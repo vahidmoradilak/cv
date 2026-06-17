@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>وحید مرادی لک | Vahid Moradi Lak – Software Engineer</title>
-    <meta name="description" content="وب‌سایت شخصی وحید مرادی لک، توسعه‌دهنده نرم‌افزار، متخصص هوش مصنوعی، امنیت، NLP و Full-Stack Development.">
+    <meta name="description" content="وب‌سایت شخصی وحید مرادی لک - توسعه‌دهنده نرم‌افزار، متخصص هوش مصنوعی، امنیت، NLP و Full-Stack Development.">
+    <meta name="keywords" content="توسعه‌دهنده  فول‌استک, LLMs, python, Agents">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://moradilak.ir/">
 
@@ -42,8 +43,6 @@
     }
     </script>
 
-    <meta name="description" content="رزومه حرفه‌ای وحید مرادی - توسعه‌دهنده ارشد فول‌استک">
-    <meta name="keywords" content="توسعه‌دهنده  فول‌استک, React, TypeScript, Next.js">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -52,14 +51,21 @@
     <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css">
 
     <style>
-        
 :root {
     --bg: #f8fafc;
     --card: #ffffff;
     --text: #0f172a;
     --muted: #475569;
     --primary: #2563eb;
+    --secondary: #1e40af;
     --border: #e5e7eb;
+    --light-bg: #f3f4f6;
+    --shadow: rgba(0,0,0,0.1);
+    --primary-rgb: 37, 99, 235;
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --text-color: #0f172a;
+    --border-color: #e5e7eb;
 }
 
 html[data-theme="dark"] {
@@ -68,374 +74,16 @@ html[data-theme="dark"] {
     --text: #f8fafc;
     --muted: #cbd5e1;
     --primary: #60a5fa;
+    --secondary: #93bbfd;
     --border: #1e293b;
+    --light-bg: #1e293b;
+    --shadow: rgba(0,0,0,0.3);
+    --primary-rgb: 96, 165, 250;
+    --primary-color: #60a5fa;
+    --secondary-color: #93bbfd;
+    --text-color: #f8fafc;
+    --border-color: #1e293b;
 }
-
-
-        
-body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Vazirmatn', sans-serif, 'tahoma';
-    margin: 0;
-    padding: 20px;
-}
-
-
-        
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: var(--card);
-    border: 1px solid var(--border);
-    padding: 30px;
-    border-radius: 10px;
-}
-
-
-        .language-switch {
-            position: absolute;
-            top: 60px;
-            left: 20px;
-            background: var(--primary-color);
-            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            border: none;
-            font-family: 'Vazirmatn', sans-serif;
-            font-size: 0.9em;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .language-switch:hover {
-            background: var(--secondary-color);
-        }
-
-        [lang="en"] {
-            direction: ltr;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        [lang="en"] .container {
-            text-align: left;
-        }
-
-        [lang="en"] .contact-info {
-            text-align: left;
-        }
-
-        [lang="en"] .profile-image {
-            text-align: left;
-        }
-
-        [lang="en"] .section-title {
-            text-align: left;
-        }
-
-        [lang="en"] .experience-item {
-            text-align: left;
-        }
-
-        [lang="en"] .skills-list {
-            justify-content: flex-start;
-        }
-
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-            font-weight: 700;
-            font-size: 2.2em;
-            margin-bottom: 30px;
-        }
-
-        .section {
-            margin: 25px 0;
-        }
-
-        .section-title {
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            font-weight: 600;
-            font-size: 1.5em;
-            position: relative;
-            padding-bottom: 8px;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 80px;
-            height: 4px;
-            background: var(--primary-color);
-            border-radius: 2px;
-        }
-
-        [lang="en"] .section-title::after {
-            right: auto;
-            left: 0;
-        }
-
-        .contact-info {
-            text-align: center;
-            margin-bottom: 30px;
-            font-weight: 500;
-        }
-
-        .contact-info p {
-            margin: 8px 0;
-            color: #34495e;
-        }
-
-        .profile-image {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .profile-image img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            object-position: center 20%;
-            border: 4px solid var(--primary-color);
-            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .profile-image img:hover {
-            transform: scale(1.5);
-        }
-
-        .experience-item {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: var(--light-bg);
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-
-        .experience-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        }
-
-        .experience-title {
-            font-weight: 600;
-            color: #2c3e50;
-            font-size: 1.1em;
-            margin-bottom: 5px;
-        }
-
-        .experience-date {
-            color: #7f8c8d;
-            font-size: 0.9em;
-            font-weight: 500;
-        }
-
-        .experience-item ul {
-            margin: 10px 0;
-            padding-right: 20px;
-        }
-
-        [lang="en"] .experience-item ul {
-            padding-right: 0;
-            padding-left: 20px;
-        }
-
-        .experience-item li {
-            margin: 5px 0;
-            color: #34495e;
-        }
-
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-        }
-
-        .skill-item {
-            background: var(--light-bg);
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: 500;
-            color: #2c3e50;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-
-        .skill-item:hover {
-            background: var(--primary-color);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .fa-content, .en-content {
-            display: none;
-        }
-
-        .fa-content.active, .en-content.active {
-            display: block;
-        }
-
-        .section-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-title {
-            color: #2c3e50;
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin: 10px 0;
-        }
-
-        .project-tech span {
-            background: #f0f0f0;
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 0.9em;
-        }
-
-        .certificate-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-            padding: 10px;
-            background: #f8f9fa;
-            border-radius: 8px;
-        }
-
-        .certificate-icon {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #3498db;
-            color: white;
-            border-radius: 50%;
-        }
-
-        .achievement-item {
-            position: relative;
-            padding-right: 20px;
-            margin-bottom: 15px;
-        }
-
-        .achievement-item::before {
-            content: '🏆';
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-
-        .volunteer-item {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-
-        .interests-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .interest-item {
-            background: #e8f4f8;
-            color: #2c3e50;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .social-link {
-            color: var(--primary-color);
-            font-size: 1.5em;
-            transition: all 0.3s ease;
-        }
-
-        .social-link:hover {
-            color: var(--secondary-color);
-            transform: translateY(-2px);
-        }
-
-        .skill-category {
-            margin-bottom: 20px;
-        }
-
-        .skill-category-title {
-            color: var(--primary-color);
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .section-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    
-p, li, span, div {
-    color: var(--text);
-}
-
-.experience-date {
-    color: var(--muted);
-}
-
-
-.theme-switch {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    border: 1px solid var(--border);
-    background: var(--card);
-    color: var(--text);
-    padding: 4px 8px;
-    font-size: 0.8em;
-    cursor: pointer;
-}
-
 </style>
 </head>
 
@@ -507,7 +155,7 @@ p, li, span, div {
                     <div>شرکت فناوری پارس</div>
                     <div class="experience-date">1402 - 1403</div>
                     <ul>
-                        <li>تولید اپلیکشین پیام‌رسان بومی برای گروه‌های خاص</li>
+                        <li>تولید اپلیکیشن پیام‌رسان بومی برای گروه‌های خاص</li>
                         <li>تولید فیلترشکن اختصاصی</li>
                         <li>تحلیل، بررسی و نوشتن الگوریتم برای رمزگذاری مبتنی بر پست‌کوانتوم</li>
                         <li>راهنمایی و آموزش توسعه‌دهندگان تازه‌کار</li>
@@ -588,7 +236,7 @@ p, li, span, div {
                     </div>
                     <div class="project-card">
                         <div class="project-title">پیام‌رسان بومی</div>
-                        <p>ایجاد اپلیکشن پیام‌رسان مبتنی بر رمزگذاری پست کوانتوم برای گروه‌های خاص</p>
+                        <p>ایجاد اپلیکیشن پیام‌رسان مبتنی بر رمزگذاری پست کوانتوم برای گروه‌های خاص</p>
                         <div class="project-tech">
                             <span>c</span>
                             <span>Python</span>
@@ -597,7 +245,7 @@ p, li, span, div {
                             <span>Node.js</span>
                             <span>MongoDB</span>
                         </div>
-                        <a href="https://github.com/yourusername/project" target="_blank">مشاهده در گیت‌هاب</a>
+                        <a href="https://github.com/vahidmoradilak" target="_blank">مشاهده در گیت‌هاب</a>
                     </div>
                     <div class="project-card">
                         <div class="project-title">سامانه انتخاب واحد</div>
@@ -609,7 +257,7 @@ p, li, span, div {
                             <span>PHP</span>
                             <span>MySQL</span>
                         </div>
-                        <a href="https://github.com/yourusername/project" target="_blank">مشاهده در گیت‌هاب</a>
+                        <a href="https://github.com/vahidmoradilak" target="_blank">مشاهده در گیت‌هاب</a>
                     </div>
                     <div class="project-card">
                         <div class="project-title">طراحی کتاب فروشی برخط</div>
@@ -623,7 +271,7 @@ p, li, span, div {
                             <span>PHP</span>
                             <span>MySQL</span>
                         </div>
-                        <a href="https://github.com/yourusername/project" target="_blank">مشاهده در گیت‌هاب</a>
+                        <a href="https://github.com/vahidmoradilak" target="_blank">مشاهده در گیت‌هاب</a>
                     </div>
                 </div>
             </div>
@@ -661,6 +309,18 @@ p, li, span, div {
                 <h2 class="section-title">گواهینامه‌ها</h2>
                 <div class="certificate-item">
                     <div class="certificate-icon">
+                        <img src="https://api2.sololearn.com/v2/certificates/CC-SZDKWVTM/image/png?t=639008043617779100" width="20" height="20" alt="">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                        <div class="experience-title">Python</div>
+                        <div>صادرکننده: Sololearn</div>
+                        <div class="experience-date">1402</div>
+                        <a href="https://www.sololearn.com/certificates/CC-SZDKWVTM" target="_blank">مشاهده تصویر گواهی</a>
+                    </div>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-icon">
                         <img src="https://quera.org/media/public/certificate/0072e135efc84500a4549920dc2a6100.png" width="20" height="20" alt="">
                         <i class="fas fa-certificate"></i>
                     </div>
@@ -680,19 +340,19 @@ p, li, span, div {
                         <div class="experience-title">SQL</div>
                         <div>صادرکننده: Sololearn</div>
                         <div class="experience-date">1400</div>
-                        <a href="https://quera.org/media/public/certificate/2b7a7fa5b5744226ba8ad51b27a1489d.png" target="_blank">مشاهده تصویر گواهی</a>
+                        <a href="https://quera.org/media/public/certificate/45bf641f03d1470692b27878014be8ac.png" target="_blank">مشاهده تصویر گواهی</a>
                     </div>
                 </div>
                 <div class="certificate-item">
                     <div class="certificate-icon">
-                        <img src="https://quera.org/media/public/certificate/2b7a7fa5b5744226ba8ad51b27a1489d.png" width="20" height="20" alt="">
+                        <img src="https://api2.sololearn.com/v2/certificates/CT-QS0MGBBH/image/jpg?t=639172902619529400" width="20" height="20" alt="">
                         <i class="fas fa-certificate"></i>
                     </div>
                     <div>
                         <div class="experience-title">CSS</div>
                         <div>صادرکننده: Sololearn</div>
                         <div class="experience-date">1400</div>
-                        <a href="https://quera.org/media/public/certificate/45bf641f03d1470692b27878014be8ac.png" target="_blank">مشاهده تصویر گواهی</a>
+                        <a href="https://www.sololearn.com/certificates/CT-QS0MGBBH" target="_blank">مشاهده تصویر گواهی</a>
                     </div>
                 </div>
                 <div class="certificate-item">
@@ -757,12 +417,12 @@ p, li, span, div {
                 <div class="volunteer-item">
                     <div class="experience-title">سازمان بین‌المللی دانشجویان</div>
                     <div>عضو ویژه</div>
-                    <div class="experience-date">1404 - کنون</div>
+                    <div class="experience-date">1404 - اکنون</div>
                 </div>
                 <div class="volunteer-item">
                     <div class="experience-title">کانون دانش‌آموختگان طرح‌ولایت</div>
                     <div>خادم</div>
-                    <div class="experience-date">1400 - کنون</div>
+                    <div class="experience-date">1400 - اکنون</div>
                 </div>
             </div>
 
@@ -817,9 +477,9 @@ p, li, span, div {
 
             <div class="section">
                 <h2 class="section-title">About Me</h2>
-                <p style="text-align:justify">Master of Science in Computer Engineering, Software Engineering; We have experience in various fields, from full stack and software development to working in the field of security and encryption using modern technologies. After starting our master's degree, we have also entered the field of data analysis. We have experience in the fields of NLP, LLMs, LangChain and GraphChain, Agents and similar issues.</br>
-                    We prefer serving in the country to working abroad and we would like to work in a field that is more needed in the country.</br>
-                    Overall, despite our ability and strong skills in different fields and experience working with various frameworks, we enjoy learning and gaining new experience.</p>
+                <p style="text-align:justify">M.Sc. in Computer Engineering (Software Engineering); Experienced in full-stack development, software engineering, security, and encryption using modern technologies. Since starting my master's, I have also been working in data analysis, NLP, LLMs, LangChain, GraphChain, Agents, and related fields.</br>
+                    I prefer serving my country over working abroad and wish to work in areas where my skills are most needed.</br>
+                    Overall, with strong skills across diverse fields and experience with various frameworks, I enjoy learning and gaining new experience.</p>
             </div>
 
             <div class="section">
@@ -855,7 +515,7 @@ p, li, span, div {
                     <div class="experience-date">2023 - 2024</div>
                     <ul>
                         <li>Creating a native messaging app for specific groups</li>
-                        <li>Production of dedicated filter breakers</li>
+                        <li>Development of custom VPN/proxy solutions</li>
                         <li>Analyze, test, and write algorithms for post-quantum encryption</li>
                         <li>Mentoring and training novice developers</li>
                     </ul>
@@ -869,19 +529,19 @@ p, li, span, div {
                         <li>Repairing and upgrading faulty systems</li>
                     </ul>
                 </div>
+                <div class="experience-item">
+                    <div class="experience-title">Full stack</div>
+                    <div>Shahid Rajaee University</div>
+                    <div class="experience-date">2020 - 2021</div>
+                    <ul>
+                        <li>Designing a pre-registration system for student department selection</li>
+                        <li>Implementing an authentication system</li>
+                        <li>Developing reusable components</li>
+                        <li>SEO and website performance optimization</li>
+                    </ul>
+                </div>
             </div>
-            <div class="experience-item">
-                <div class="experience-title">Full stack</div>
-                <div>Shahid Rajaee University</div>
-                <div class="experience-date">2020 - 2021</div>
-                <ul>
-                    <li>Designing a pre-registration system for student department selection</li>
-                    <li>Implementing an authentication system</li>
-                    <li>Developing reusable components</li>
-                    <li>SEO and website performance optimization</li>
-                </ul>
-            </div>
-            
+                
             <div class="section">
                 <h2 class="section-title">Skills</h2>
                 <div class="skill-category">
@@ -1008,6 +668,18 @@ p, li, span, div {
                 <h2 class="section-title">Certificates</h2>
                 <div class="certificate-item">
                     <div class="certificate-icon">
+                        <img src="https://api2.sololearn.com/v2/certificates/CC-SZDKWVTM/image/png?t=639008043617779100" width="20" height="20" alt="">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                        <div class="experience-title">Python</div>
+                        <div>Issuer: Sololearn</div>
+                        <div class="experience-date">2023</div>
+                        <a href="https://www.sololearn.com/certificates/CC-SZDKWVTM" target="_blank">View certificate image</a>
+                    </div>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-icon">
                         <img src="https://quera.org/media/public/certificate/0072e135efc84500a4549920dc2a6100.png" width="20" height="20" alt="">
                         <i class="fas fa-certificate"></i>
                     </div>
@@ -1027,19 +699,19 @@ p, li, span, div {
                         <div class="experience-title">SQL</div>
                         <div>Issuer: Sololearn</div>
                         <div class="experience-date">2021</div>
-                        <a href="https://quera.org/media/public/certificate/2b7a7fa5b5744226ba8ad51b27a1489d.png" target="_blank">View certificate image</a>
+                        <a href="https://quera.org/media/public/certificate/45bf641f03d1470692b27878014be8ac.png" target="_blank">View certificate image</a>
                     </div>
                 </div>
                 <div class="certificate-item">
                     <div class="certificate-icon">
-                        <img src="https://quera.org/media/public/certificate/2b7a7fa5b5744226ba8ad51b27a1489d.png" width="20" height="20" alt="">
+                        <img src="https://api2.sololearn.com/v2/certificates/CT-QS0MGBBH/image/jpg?t=639172902619529400" width="20" height="20" alt="">
                         <i class="fas fa-certificate"></i>
                     </div>
                     <div>
                         <div class="experience-title">CSS</div>
                         <div>Issuer: Sololearn</div>
                         <div class="experience-date">2021</div>
-                        <a href="https://quera.org/media/public/certificate/45bf641f03d1470692b27878014be8ac.png" target="_blank">View certificate image</a>
+                        <a href="https://www.sololearn.com/certificates/CT-QS0MGBBH" target="_blank">View certificate image</a>
                     </div>
                 </div>
                 <div class="certificate-item">
@@ -1084,7 +756,7 @@ p, li, span, div {
                 <h2 class="section-title">Achievements and Honors</h2>
                 <div class="achievement-item">
                     <div class="experience-title">Rank 17 in the Master's Degree Entrance Exam</div>
-                    <div>Measuring organization</div>
+                    <div>National Organization of Educational Testing</div>
                     <div class="experience-date">2023</div>
                 </div>
                 <div class="achievement-item">
@@ -1100,7 +772,7 @@ p, li, span, div {
             </div>
 
             <div class="section">
-                <h2 class="section-title">Membership in Collections</h2>
+                <h2 class="section-title">Memberships</h2>
                 <div class="volunteer-item">
                     <div class="experience-title">International Student Organization</div>
                     <div>Special member</div>
@@ -1108,7 +780,7 @@ p, li, span, div {
                 </div>
                 <div class="volunteer-item">
                     <div class="experience-title">Tarhvelayat Alumni Association</div>
-                    <div>Servant</div>
+                    <div>Volunteer</div>
                     <div class="experience-date">2019 - present</div>
                 </div>
             </div>
@@ -1127,10 +799,10 @@ p, li, span, div {
                 <div class="interests-list">
                     <span class="interest-item">Natural Language Processing (NLP)</span>
                     <span class="interest-item">Data Mining</span>
-                    <span class="interest-item">Questions Answering</span>
+                    <span class="interest-item">Question Answering</span>
                     <span class="interest-item">Artificial Intelligence (AI)</span>
                     <span class="interest-item">Machine Learning (ML)</span>
-                    <span class="interest-item">Deap Learning</span>
+                    <span class="interest-item">Deep Learning</span>
                     <span class="interest-item">Large Language Models (LLMs)</span>
                     <span class="interest-item">Error Troubleshooting</span>
                     <span class="interest-item">Software Development and Security</span>
@@ -1139,7 +811,7 @@ p, li, span, div {
         </div>
     </div>
 
-    <p style="text-align:center"><a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=5253644&Code=hkM6px2BDgc7kTytSjvm93qYhdsgbFt1'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=5253644&Code=hkM6px2BDgc7kTytSjvm93qYhdsgbFt1' alt='' style='cursor:pointer' code='hkM6px2BDgc7kTytSjvm93qYhdsgbFt1'></a></p>
+    <p class="enamad"><a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=5253644&Code=hkM6px2BDgc7kTytSjvm93qYhdsgbFt1'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=5253644&Code=hkM6px2BDgc7kTytSjvm93qYhdsgbFt1' alt='' style='cursor:pointer' code='hkM6px2BDgc7kTytSjvm93qYhdsgbFt1'></a></p>
     
     <script>
         function toggleLanguage() {
@@ -1164,15 +836,20 @@ p, li, span, div {
         }
     </script>
 
-<script>
-function toggleTheme() {
-    const html = document.documentElement;
-    html.setAttribute(
-        'data-theme',
-        html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
-    );
-}
-</script>
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            try { localStorage.setItem('theme', next); } catch (e) {}
+        }
+
+        try {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        } catch (e) {}
+    </script>
 
 </body>
 </html>
