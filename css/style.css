@@ -482,6 +482,34 @@ h1 {
 }
 
 /* ========================================
+   Download Buttons
+   ======================================== */
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    border: none;
+    font-family: inherit;
+}
+
+.btn-secondary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: var(--secondary);
+    transform: translateY(-1px);
+    color: white;
+}
+
+/* ========================================
    Enamad
    ======================================== */
 
