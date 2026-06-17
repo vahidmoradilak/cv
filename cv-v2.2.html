@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<!-- <html lang="en"> -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وحید مرادی | Vahid Moradi</title>
+    <meta name="description" content="رزومه حرفه‌ای وحید مرادی - توسعه‌دهنده ارشد فول‌استک">
+    <meta name="keywords" content="توسعه‌دهنده  فول‌استک, React, TypeScript, Next.js">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css">
+
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #1f2937;
+            --light-bg: #f3f4f6;
+            --border-color: #e5e7eb;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f6f8fc 0%, #e9ecef 100%);
+            font-family: 'Vazirmatn', sans-serif, 'tahoma';
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .language-switch {
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            background: var(--primary-color);
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            font-family: 'Vazirmatn', sans-serif;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .language-switch:hover {
+            background: var(--secondary-color);
+        }
+
+        [lang="en"] {
+            direction: ltr;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        [lang="en"] .container {
+            text-align: left;
+        }
+
+        [lang="en"] .contact-info {
+            text-align: left;
+        }
+
+        [lang="en"] .profile-image {
+            text-align: left;
+        }
+
+        [lang="en"] .section-title {
+            text-align: left;
+        }
+
+        [lang="en"] .experience-item {
+            text-align: left;
+        }
+
+        [lang="en"] .skills-list {
+            justify-content: flex-start;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            font-weight: 700;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            margin: 25px 0;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 1.5em;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        [lang="en"] .section-title::after {
+            right: auto;
+            left: 0;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+            color: #34495e;
+        }
+
+        .profile-image {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-image img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 20%;
+            border: 4px solid var(--primary-color);
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image img:hover {
+            transform: scale(1.5);
+        }
+
+        .experience-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: var(--light-bg);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience-title {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .experience-date {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .experience-item ul {
+            margin: 10px 0;
+            padding-right: 20px;
+        }
+
+        [lang="en"] .experience-item ul {
+            padding-right: 0;
+            padding-left: 20px;
+        }
+
+        .experience-item li {
+            margin: 5px 0;
+            color: #34495e;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .skill-item {
+            background: var(--light-bg);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+            color: #2c3e50;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .fa-content, .en-content {
+            display: none;
+        }
+
+        .fa-content.active, .en-content.active {
+            display: block;
+        }
+
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-title {
+            color: #2c3e50;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 10px 0;
+        }
+
+        .project-tech span {
+            background: #f0f0f0;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+
+        .certificate-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .certificate-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #3498db;
+            color: white;
+            border-radius: 50%;
+        }
+
+        .achievement-item {
+            position: relative;
+            padding-right: 20px;
+            margin-bottom: 15px;
+        }
+
+        .achievement-item::before {
+            content: '🏆';
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .volunteer-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .interest-item {
+            background: #e8f4f8;
+            color: #2c3e50;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            color: var(--primary-color);
+            font-size: 1.5em;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .skill-category {
+            margin-bottom: 20px;
+        }
+
+        .skill-category-title {
+            color: var(--primary-color);
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .section-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button class="language-switch" onclick="toggleLanguage()">English</button>
+
+        <div class="fa-content active">
+            <h1>وحید مرادی لک</h1>
+            
+            <div class="profile-image">
+                <img src="images/vahid.jpg" alt="profile picture">
+            </div>
+
+            <div class="contact-info">
+                <p>ایمیل: moradilak@ut.ac.ir | تلفن: ۸۵۸۵ ۲۱۷ ۰۹۳۵</p>
+                <p>آدرس: تهران، امیرآباد، خیابان کارگر شمالی</p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/moradilak" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/vahidmoradilak" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com/vahidmoradilak" target="_blank" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">درباره من</h2>
+                <p style="text-align:center; font-weight: bold;">به نام حضرت دوست که هر چه داریم از اوست</p>
+                <p style="text-align:justify">کارشناس ارشد مهندسی کامپیوتر، گرایش نرم‌افزار؛ در زمینه‌های مختلفی تجربه کار داریم از فول استک و توسعه دهنده نرم‌افزار گرفته تا کار کردن در حوزه امنیت و رمز با استفاده از تکنولوژی‌های مدرن، بعد از آغاز دوران تحصیلی ارشد نیز پا در عرصه تحلیل داده‌ها گذاشته‌ایم، در حوزه‌های nlp, LLMs, LangChain and GraphChain, Agents و مسایل مشابه تجربه کار داریم.
+                    </br>خدمت کردن در کشور را به کار در خارج کشور ترجیح می‌دهیم و اینکه دوست داریم روی فیلدی کار کنیم که در کشور احساس نیاز بیشتری به آن بشود.
+                </br>در کل با وجود توانایی و داشتن مهارت‌های قوی در عرصه‌های مختلف و تجربه کار با فریم‌ورک‌های متنوع از یادگیری و کسب تجربه جدید لذت می‌بریم.</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">تحصیلات</h2>
+                <div class="experience-item">
+                    <div class="experience-title">کارشناس ارشد مهندسی کامپیوتر</div>
+                    <div>دانشگاه تهران</div>
+                    <div>گرایش: مهندسی نرم‌افزار</div>
+                    <div>معدل: در حال تحصیل</div>
+                    <div class="experience-date">1402 - اکنون</div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">کارشناس مهندسی کامپیوتر</div>
+                    <div>دانشگاه شهید رجایی</div>
+                    <div>گرایش: نرم‌افزار و هوش</div>
+                    <div>معدل: 18.31</div>
+                    <div class="experience-date">1397 - 1401</div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">دیپلم ریاضی فیزیک</div>
+                    <div>دبیرستان شهید بهشتی</div>
+                    <div>رشته ریاضی فیزیک</div>
+                    <div>معدل: 19.38</div>
+                    <div class="experience-date">1394 - 1397</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">تجربیات کاری</h2>
+                <div class="experience-item">
+                    <div class="experience-title">توسعه‌دهنده ارشد</div>
+                    <div>شرکت فناوری پارس</div>
+                    <div class="experience-date">1402 - 1403</div>
+                    <ul>
+                        <li>تولید اپلیکشین پیام‌رسان بومی برای گروه‌های خاص</li>
+                        <li>تولید فیلترشکن اختصاصی</li>
+                        <li>تحلیل، بررسی و نوشتن الگوریتم برای رمزکذاری مبتنی بر پست‌کوانتوم</li>
+                        <li>راهنمایی و آموزش توسعه‌دهندگان تازه‌کار</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">کارآموز شبکه و سخت‌افزار</div>
+                    <div>دانشگاه شهید رجایی</div>
+                    <div class="experience-date">1400 - 1401</div>
+                    <ul>
+                        <li>عیب‌یابی و رفع مشکلات سایت‌ها</li>
+                        <li>تعمیر سیستم‌های معیوب و ارتقای آنها </li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">فول‌استک</div>
+                    <div>دانشگاه شهید رجایی</div>
+                    <div class="experience-date">1399 - 1400</div>
+                    <ul>
+                        <li>طراحی سامانه پیش‌ثبت‌نام انتخاب واحد دانشجویان </li>
+                        <li>پیاده‌سازی سیستم احراز هویت</li>
+                        <li>توسعه کامپوننت‌های قابل استفاده مجدد</li>
+                        <li>بهینه‌سازی SEO و عملکرد وب‌سایت</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">مهارت‌ها</h2>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">زبان‌های برنامه‌نویسی</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">c</span>
+                        <span class="skill-item">c++</span>
+                        <span class="skill-item">c#</span>
+                        <span class="skill-item">HTML</span>
+                        <span class="skill-item">CSS</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">PHP</span>
+                        <span class="skill-item">Go</span>
+                        <span class="skill-item">Python</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">فریم‌ورک‌ها و کتابخانه‌ها</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">Qt</span>
+                        <span class="skill-item">Jupyter</span>
+                        <span class="skill-item">Django</span>
+                        <span class="skill-item">Transformers</span>
+                        <span class="skill-item">Datasets</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">ابزارها و تکنولوژی‌ها</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">Hugging Face</span>
+                        <span class="skill-item">Colab</span>
+                        <span class="skill-item">Kaggle</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">پروژه‌ها</h2>
+                <div class="section-grid">
+                    <div class="project-card">
+                        <div class="project-title">Queen-McCluskey</div>
+                        <p>به دست آوردن تعداد PI و EPI در مدارهای منطقی به صورت خودکار</p>
+                        <div class="project-tech">
+                            <span>c++</span>
+                            <span>c</span>
+                            <span>Qt</span>
+                        </div>
+                        <a href="https://github.com/vahidmoradilak/Queen-McCluskey" target="_blank">مشاهده در گیت‌هاب</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-title">پیام‌رسان بومی</div>
+                        <p>ایجاد اپلیکشن پیام‌رسان مبتنی بر رمزگذاری پست کوانتوم برای گروه‌های خاص</p>
+                        <div class="project-tech">
+                            <span>c</span>
+                            <span>Python</span>
+                            <span>React</span>
+                            <span>TypeScript</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <a href="https://github.com/yourusername/project" target="_blank">مشاهده در گیت‌هاب</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-title">سامانه انتخاب واحد</div>
+                        <p>طراحی و توسعه یک سامانه برای پیش‌ثبت‌نام انتخاب واحد دانشجویان</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                        </div>
+                        <a href="https://github.com/yourusername/project" target="_blank">مشاهده در گیت‌هاب</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-title">طراحی کتاب فروشی برخط</div>
+                        <p>فروشگاهی با صفر تا صد امکانات الزم برای خرید کتاب، پیگیری و مشاهده وضعیت</br>
+                            سفارش و ثبت</br>
+                            افزودن دیدگاه برای کتاب‌ها</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                        </div>
+                        <a href="https://github.com/yourusername/project" target="_blank">مشاهده در گیت‌هاب</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">زبان‌ها</h2>
+                <div class="experience-item">
+                    <div class="experience-title">زبان لکی</div>
+                    <div>سطح: بومی</div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">زبان فارسی</div>
+                    <div>سطح: بومی</div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">زبان انگلیسی</div>
+                    <div>سطح: پیشرفته</div>
+                    <!-- <div>مدرک: IELTS 7.5</div> -->
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">زبان کردی</div>
+                    <div>سطح: پیشرفته</div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">زبان عربی</div>
+                    <div>سطح: متوسط</div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">زبان آلمانی</div>
+                    <div>سطح: مقدماتی</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">گواهینامه‌ها</h2>
+                <div class="certificate-item">
+                    <div class="certificate-icon">
+                        <img src="https://quera.org/media/public/certificate/0072e135efc84500a4549920dc2a6100.png" width="20" height="20" alt="">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                        <div class="experience-title">PHP</div>
+                        <div>صادرکننده: Sololearn</div>
+                        <div class="experience-date">1401</div>
+                        <a href="https://quera.org/media/public/certificate/0072e135efc84500a4549920dc2a6100.png" target="_blank">مشاهده تصویر گواهی</a>
+                    </div>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-icon">
+                        <img src="https://quera.org/media/public/certificate/45bf641f03d1470692b27878014be8ac.png" width="20" height="20" alt="">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                        <div class="experience-title">SQL</div>
+                        <div>صادرکننده: Sololearn</div>
+                        <div class="experience-date">1400</div>
+                        <a href="https://quera.org/media/public/certificate/2b7a7fa5b5744226ba8ad51b27a1489d.png" target="_blank">مشاهده تصویر گواهی</a>
+                    </div>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-icon">
+                        <img src="https://quera.org/media/public/certificate/2b7a7fa5b5744226ba8ad51b27a1489d.png" width="20" height="20" alt="">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                        <div class="experience-title">CSS</div>
+                        <div>صادرکننده: Sololearn</div>
+                        <div class="experience-date">1400</div>
+                        <a href="https://quera.org/media/public/certificate/45bf641f03d1470692b27878014be8ac.png" target="_blank">مشاهده تصویر گواهی</a>
+                    </div>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-icon">
+                        <img src="https://quera.org/media/public/certificate/2b7a7fa5b5744226ba8ad51b27a1489d.png" width="20" height="20" alt="">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                        <div class="experience-title">HTML</div>
+                        <div>صادرکننده: Sololearn</div>
+                        <div class="experience-date">1400</div>
+                        <a href="https://quera.org/media/public/certificate/2b7a7fa5b5744226ba8ad51b27a1489d.png" target="_blank">مشاهده تصویر گواهی</a>
+                    </div>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-icon">
+                        <img src="https://quera.org/media/public/certificate/ad426e937bea492a9779c915a18b55d5.png" width="20" height="20" alt="">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                        <div class="experience-title">C++</div>
+                        <div>صادرکننده: Sololearn</div>
+                        <div class="experience-date">1400</div>
+                        <a href="https://quera.org/media/public/certificate/ad426e937bea492a9779c915a18b55d5.png" target="_blank">مشاهده تصویر گواهی</a>
+                    </div>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-icon">
+                        <img src="https://quera.org/media/public/certificate/1b1f29ab8ccb490197925e37f88f15a3.png" width="20" height="20" alt="">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                        <div class="experience-title">C#</div>
+                        <div>صادرکننده: Sololearn</div>
+                        <div class="experience-date">1400</div>
+                        <a href="https://quera.org/media/public/certificate/1b1f29ab8ccb490197925e37f88f15a3.png" target="_blank">مشاهده تصویر گواهی</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">دستاوردها و افتخارات</h2>
+                <div class="achievement-item">
+                    <div class="experience-title">رتبه 17 کنکور کارشناسی ارشد</div>
+                    <div>سازمان سنجش</div>
+                    <div class="experience-date">1402</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="experience-title">جزء 10 درصد برتر استعدادهای درخشان</div>
+                    <div>مدیریت آموزشی دانشگاه شهید رجایی</div>
+                    <div class="experience-date">1401</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="experience-title">نماینده کل ورودی‌های 97 رشته کامپیوتر</div>
+                    <div>رییس دانشکده مهندسی کامپیوتر</div>
+                    <div class="experience-date">1398</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">عضویت در مجموعه‌ها</h2>
+                <div class="volunteer-item">
+                    <div class="experience-title">سازمان بین‌المللی دانشجویان</div>
+                    <div>عضو ویژه</div>
+                    <div class="experience-date">1404 - کنون</div>
+                </div>
+                <div class="volunteer-item">
+                    <div class="experience-title">کانون دانش‌آموختگان طرح‌ولایت</div>
+                    <div>خادم</div>
+                    <div class="experience-date">1400 - کنون</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">فعالیت‌های داوطلبانه</h2>
+                <div class="volunteer-item">
+                    <div class="experience-title">مدرس کارگاه‌های برنامه‌نویسی</div>
+                    <div>انجمن علمی دانشکده مهندسی کامپیوتر</div>
+                    <div class="experience-date">1398 - 1403</div>
+                </div>
+            </div>
+
+
+            <div class="section">
+                <h2 class="section-title">علاقه‌مندی‌ها</h2>
+                <div class="interests-list">
+                    <span class="interest-item">پردازش زبان طبیعی</span>
+                    <span class="interest-item">داده کاوی</span>
+                    <span class="interest-item">پاسخگویی به سوالات</span>
+                    <span class="interest-item">هوش مصنوعی</span>
+                    <span class="interest-item">یادگیری ماشین</span>
+                    <span class="interest-item">یادگیری عمیق</span>
+                    <span class="interest-item">مدل‌های زبانی بزرگ</span>
+                    <span class="interest-item">عیب‌یابی خطا</span>
+                    <span class="interest-item">توسعه و امنیت نرم‌افزار</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="en-content">
+            <h1>Vahid Moradi Lak</h1>
+            
+            <div class="profile-image" style="text-align: center;">
+                <img src="images/vahid.jpg" alt="Profile Picture">
+            </div>
+
+            <div class="contact-info" style="text-align: center;">
+                <p>Email: moradilak@ut.ac.ir | Phone: +98 935 217 8585</p>
+                <p>Address: North Kargar Street, Amirabad, Tehran, Iran</p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/moradilak" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/vahidmoradilak" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com/vahidmoradilak" target="_blank" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">About Me</h2>
+                <p style="text-align:justify">Master of Science in Computer Engineering, Software Engineering; We have experience in various fields, from full stack and software development to working in the field of security and encryption using modern technologies. After starting our master's degree, we have also entered the field of data analysis. We have experience in the fields of NLP, LLMs, LangChain and GraphChain, Agents and similar issues.</br>
+                    We prefer serving in the country to working abroad and we would like to work in a field that is more needed in the country.</br>
+                    Overall, despite our ability and strong skills in different fields and experience working with various frameworks, we enjoy learning and gaining new experience.</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="experience-item">
+                    <div class="experience-title">Master of Science in Software Engineering</div>
+                    <div>University of Tehran</div>
+                    <div>Major: Software Engineering</div>
+                    <div>GPA: Studying</div>
+                    <div class="experience-date">2023 - Present</div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">Bachelor of Science in Software Engineering</div>
+                    <div>Shahid Rajaee Teacher Training University</div>
+                    <div>Major: Software Engineering</div>
+                    <div>GPA: 18.31/20</div>
+                    <div class="experience-date">2018 - 2022</div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">Diploma in Mathematics and Physics</div>
+                    <div>Shahid Beheshti High School</div>
+                    <div>Major: Mathematics and Physics</div>
+                    <div>GPA: 19.38/20</div>
+                    <div class="experience-date">2015 - 2018</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="experience-item">
+                    <div class="experience-title">Senior Developer</div>
+                    <div>Pars Technology Company</div>
+                    <div class="experience-date">2023 - 2024</div>
+                    <ul>
+                        <li>Creating a native messaging app for specific groups</li>
+                        <li>Production of dedicated filter breakers</li>
+                        <li>Analyze, test, and write algorithms for post-quantum encryption</li>
+                        <li>Mentoring and training novice developers</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">Network and Hardware Intern</div>
+                    <div>Shahid Rajaee University</div>
+                    <div class="experience-date">2021 - 2022</div>
+                    <ul>
+                        <li>Troubleshooting and fixing site problems</li>
+                        <li>Repairing and upgrading faulty systems</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-title">Full stack</div>
+                <div>Shahid Rajaee University</div>
+                <div class="experience-date">2020 - 2021</div>
+                <ul>
+                    <li>Designing a pre-registration system for student department selection</li>
+                    <li>Implementing an authentication system</li>
+                    <li>Developing reusable components</li>
+                    <li>SEO and website performance optimization</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Skills</h2>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Programming Languages</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">c</span>
+                        <span class="skill-item">c++</span>
+                        <span class="skill-item">c#</span>
+                        <span class="skill-item">HTML</span>
+                        <span class="skill-item">CSS</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">PHP</span>
+                        <span class="skill-item">Go</span>
+                        <span class="skill-item">Python</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Frameworks & Libraries</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">Qt</span>
+                        <span class="skill-item">Jupyter</span>
+                        <span class="skill-item">Django</span>
+                        <span class="skill-item">Transformers</span>
+                        <span class="skill-item">Datasets</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Tools & Technologies</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">Hugging Face</span>
+                        <span class="skill-item">Colab</span>
+                        <span class="skill-item">Kaggle</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Projects</h2>
+                <div class="section-grid">
+                    <div class="project-card">
+                        <div class="project-title">Queen-McCluskey</div>
+                        <p>Obtaining PI and EPI numbers in logic circuits automaticall</p>
+                        <div class="project-tech">
+                            <span>c++</span>
+                            <span>c</span>
+                            <span>Qt</span>
+                        </div>
+                        <a href="https://github.com/vahidmoradilak/Queen-McCluskey" target="_blank">View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-title">Native messenger</div>
+                        <p>Creating a messaging application based on quantum post encryption for specific groups</p>
+                        <div class="project-tech">
+                            <span>c</span>
+                            <span>Python</span>
+                            <span>React</span>
+                            <span>TypeScript</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <a href="https://github.com/yourusername/project" target="_blank">View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-title">Unit selection system</div>
+                        <p>Design and development of a system for preregistration of student unit selection</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                        </div>
+                        <a href="https://github.com/yourusername/project" target="_blank">View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-title">Online bookstore design</div>
+                        <p>A store with all the necessary features to buy books, track and view</br>
+                            order status, and</br>
+                            add comments for books.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                        </div>
+                        <a href="https://github.com/yourusername/project" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Languages</h2>
+                <div class="experience-item">
+                    <div class="experience-title">Lakish</div>
+                    <div>Level: Native</div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">Persian</div>
+                    <div>Level: Native</div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">English</div>
+                    <div>Level: Advanced</div>
+                    <!-- <div>Certificate: IELTS 7.5</div> -->
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">Kurdish</div>
+                    <div>Level: Advanced</div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">Arabic</div>
+                    <div>Level: Intermediate</div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">German</div>
+                    <div>Level: Beginner</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Certificates</h2>
+                <div class="certificate-item">
+                    <div class="certificate-icon">
+                        <img src="https://quera.org/media/public/certificate/0072e135efc84500a4549920dc2a6100.png" width="20" height="20" alt="">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                        <div class="experience-title">PHP</div>
+                        <div>Issuer: Sololearn</div>
+                        <div class="experience-date">2022</div>
+                        <a href="https://quera.org/media/public/certificate/0072e135efc84500a4549920dc2a6100.png" target="_blank">View certificate image</a>
+                    </div>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-icon">
+                        <img src="https://quera.org/media/public/certificate/45bf641f03d1470692b27878014be8ac.png" width="20" height="20" alt="">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                        <div class="experience-title">SQL</div>
+                        <div>Issuer: Sololearn</div>
+                        <div class="experience-date">2021</div>
+                        <a href="https://quera.org/media/public/certificate/2b7a7fa5b5744226ba8ad51b27a1489d.png" target="_blank">View certificate image</a>
+                    </div>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-icon">
+                        <img src="https://quera.org/media/public/certificate/2b7a7fa5b5744226ba8ad51b27a1489d.png" width="20" height="20" alt="">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                        <div class="experience-title">CSS</div>
+                        <div>Issuer: Sololearn</div>
+                        <div class="experience-date">2021</div>
+                        <a href="https://quera.org/media/public/certificate/45bf641f03d1470692b27878014be8ac.png" target="_blank">View certificate image</a>
+                    </div>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-icon">
+                        <img src="https://quera.org/media/public/certificate/2b7a7fa5b5744226ba8ad51b27a1489d.png" width="20" height="20" alt="">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                        <div class="experience-title">HTML</div>
+                        <div>Issuer: Sololearn</div>
+                        <div class="experience-date">2021</div>
+                        <a href="https://quera.org/media/public/certificate/2b7a7fa5b5744226ba8ad51b27a1489d.png" target="_blank">View certificate image</a>
+                    </div>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-icon">
+                        <img src="https://quera.org/media/public/certificate/ad426e937bea492a9779c915a18b55d5.png" width="20" height="20" alt="">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                        <div class="experience-title">C++</div>
+                        <div>Issuer: Sololearn</div>
+                        <div class="experience-date">2021</div>
+                        <a href="https://quera.org/media/public/certificate/ad426e937bea492a9779c915a18b55d5.png" target="_blank">View certificate image</a>
+                    </div>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-icon">
+                        <img src="https://quera.org/media/public/certificate/1b1f29ab8ccb490197925e37f88f15a3.png" width="20" height="20" alt="">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                        <div class="experience-title">C#</div>
+                        <div>Issuer: Sololearn</div>
+                        <div class="experience-date">2021</div>
+                        <a href="https://quera.org/media/public/certificate/1b1f29ab8ccb490197925e37f88f15a3.png" target="_blank">View certificate image</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Achievements and Honors</h2>
+                <div class="achievement-item">
+                    <div class="experience-title">Rank 17 in the Master's Degree Entrance Exam</div>
+                    <div>Measuring organization</div>
+                    <div class="experience-date">2023</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="experience-title">Among the top 10% of brilliant talents</div>
+                    <div>Educational Management of Shahid Rajaee University</div>
+                    <div class="experience-date">2020</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="experience-title">Representative of total entries in 97 computer disciplines</div>
+                    <div>Dean of the Computer Engineering Faculty</div>
+                    <div class="experience-date">2019</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Membership in Collections</h2>
+                <div class="volunteer-item">
+                    <div class="experience-title">International Student Organization</div>
+                    <div>Special member</div>
+                    <div class="experience-date">2025 - present</div>
+                </div>
+                <div class="volunteer-item">
+                    <div class="experience-title">Tarhvelayat Alumni Association</div>
+                    <div>Servant</div>
+                    <div class="experience-date">2019 - present</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Volunteer Activities</h2>
+                <div class="volunteer-item">
+                    <div class="experience-title">Programming Workshop Instructor</div>
+                    <div>Scientific Association of the Faculty of Computer Engineering</div>
+                    <div class="experience-date">2019 - 2024</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Interests</h2>
+                <div class="interests-list">
+                    <span class="interest-item">Natural Language Processing (NLP)</span>
+                    <span class="interest-item">Data Mining</span>
+                    <span class="interest-item">Questions Answering</span>
+                    <span class="interest-item">Artificial Intelligence (AI)</span>
+                    <span class="interest-item">Machine Learning (ML)</span>
+                    <span class="interest-item">Deap Learning</span>
+                    <span class="interest-item">Large Language Models (LLMs)</span>
+                    <span class="interest-item">Error Troubleshooting</span>
+                    <span class="interest-item">Software Development and Security</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p style="text-align:center"><a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=5253644&Code=hkM6px2BDgc7kTytSjvm93qYhdsgbFt1'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=5253644&Code=hkM6px2BDgc7kTytSjvm93qYhdsgbFt1' alt='' style='cursor:pointer' code='hkM6px2BDgc7kTytSjvm93qYhdsgbFt1'></a></p>
+    
+    <script>
+        function toggleLanguage() {
+            const faContent = document.querySelector('.fa-content');
+            const enContent = document.querySelector('.en-content');
+            const button = document.querySelector('.language-switch');
+            const html = document.documentElement;
+
+            if (faContent.classList.contains('active')) {
+                faContent.classList.remove('active');
+                enContent.classList.add('active');
+                button.textContent = 'فارسی';
+                html.lang = 'en';
+                html.dir = 'ltr';
+            } else {
+                enContent.classList.remove('active');
+                faContent.classList.add('active');
+                button.textContent = 'English';
+                html.lang = 'fa';
+                html.dir = 'rtl';
+            }
+        }
+    </script>
+</body>
+</html>

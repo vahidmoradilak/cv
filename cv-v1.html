@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رزومه وحید مرادی | Vahid Moradi's Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #2c3e50;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .language-switch {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            font-family: 'Vazirmatn', sans-serif;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .language-switch:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        [lang="en"] {
+            direction: ltr;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        [lang="en"] .container {
+            text-align: left;
+        }
+
+        [lang="en"] .contact-info {
+            text-align: left;
+        }
+
+        [lang="en"] .profile-image {
+            text-align: left;
+        }
+
+        [lang="en"] .section-title {
+            text-align: left;
+        }
+
+        [lang="en"] .experience-item {
+            text-align: left;
+        }
+
+        [lang="en"] .skills-list {
+            justify-content: flex-start;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            font-weight: 700;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            margin: 25px 0;
+        }
+
+        .section-title {
+            color: #3498db;
+            margin-bottom: 15px;
+            font-weight: 600;
+            font-size: 1.4em;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #3498db;
+            border-radius: 2px;
+        }
+
+        [lang="en"] .section-title::after {
+            right: auto;
+            left: 0;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+            color: #34495e;
+        }
+
+        .profile-image {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-image img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 20%;
+            border: 3px solid #3498db;
+            box-shadow: 0 0 20px rgba(52, 152, 219, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image img:hover {
+            transform: scale(1.02);
+        }
+
+        .experience-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .experience-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .experience-title {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .experience-date {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .experience-item ul {
+            margin: 10px 0;
+            padding-right: 20px;
+        }
+
+        [lang="en"] .experience-item ul {
+            padding-right: 0;
+            padding-left: 20px;
+        }
+
+        .experience-item li {
+            margin: 5px 0;
+            color: #34495e;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .skill-item {
+            background-color: #f0f0f0;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            background-color: #3498db;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .fa-content, .en-content {
+            display: none;
+        }
+
+        .fa-content.active, .en-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="language-switch" onclick="toggleLanguage()">English</button>
+
+        <div class="fa-content active">
+            <h1>وحید مرادی</h1>
+            
+            <div class="profile-image">
+                <img src="images/13990626.jpg" alt="تصویر پروفایل">
+            </div>
+
+            <div class="contact-info">
+                <p>ایمیل: moradilak@ut.ac.ir | تلفن: ۰۹۳۵۲۱۷۸۵۸۵</p>
+                <p>آدرس: تهران، خیابان ولیعصر</p>
+                <p>لینکدین: linkedin.com/in/vahidmoradi</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">درباره من</h2>
+                <p>کارشناس ارشد مهندسی نرم‌افزار با بیش از 5 سال تجربه در توسعه وب و برنامه‌نویسی. متخصص در طراحی و پیاده‌سازی سیستم‌های تحت وب با استفاده از تکنولوژی‌های مدرن. دارای مهارت‌های قوی در توسعه فرانت‌اند و تجربه کار با فریم‌ورک‌های مختلف.</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">تحصیلات</h2>
+                <div class="experience-item">
+                    <div class="experience-title">کارشناس ارشد مهندسی نرم‌افزار</div>
+                    <div>دانشگاه تهران</div>
+                    <div>گرایش: مهندسی نرم‌افزار</div>
+                    <div>معدل: 17.5</div>
+                    <div class="experience-date">1398 - 1400</div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">کارشناس مهندسی نرم‌افزار</div>
+                    <div>دانشگاه شهید رجایی</div>
+                    <div>گرایش: مهندسی نرم‌افزار</div>
+                    <div>معدل: 16.8</div>
+                    <div class="experience-date">1394 - 1398</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">تجربیات کاری</h2>
+                <div class="experience-item">
+                    <div class="experience-title">توسعه‌دهنده ارشد فرانت‌اند</div>
+                    <div>شرکت فناوری اطلاعات</div>
+                    <div class="experience-date">1400 - اکنون</div>
+                    <ul>
+                        <li>توسعه و نگهداری پروژه‌های React و Next.js</li>
+                        <li>بهینه‌سازی عملکرد و سرعت لود صفحات</li>
+                        <li>راهنمایی و آموزش توسعه‌دهندگان تازه‌کار</li>
+                        <li>پیاده‌سازی معماری میکروسرویس برای فرانت‌اند</li>
+                        <li>توسعه کامپوننت‌های قابل استفاده مجدد با TypeScript</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">توسعه‌دهنده فرانت‌اند</div>
+                    <div>استارت‌آپ دیجیتال</div>
+                    <div class="experience-date">1398 - 1400</div>
+                    <ul>
+                        <li>توسعه رابط کاربری با React و TypeScript</li>
+                        <li>پیاده‌سازی سیستم احراز هویت</li>
+                        <li>توسعه کامپوننت‌های قابل استفاده مجدد</li>
+                        <li>بهینه‌سازی SEO و عملکرد وب‌سایت</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">مهارت‌ها</h2>
+                <div class="skills-list">
+                    <span class="skill-item">React</span>
+                    <span class="skill-item">Next.js</span>
+                    <span class="skill-item">TypeScript</span>
+                    <span class="skill-item">JavaScript</span>
+                    <span class="skill-item">HTML5</span>
+                    <span class="skill-item">CSS3</span>
+                    <span class="skill-item">Git</span>
+                    <span class="skill-item">REST API</span>
+                    <span class="skill-item">Redux</span>
+                    <span class="skill-item">Material-UI</span>
+                    <span class="skill-item">Tailwind CSS</span>
+                    <span class="skill-item">Node.js</span>
+                    <span class="skill-item">Webpack</span>
+                    <span class="skill-item">Jest</span>
+                    <span class="skill-item">Docker</span>
+                    <span class="skill-item">CI/CD</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="en-content">
+            <h1>Vahid Moradi</h1>
+            
+            <div class="profile-image">
+                <img src="images/13990626.jpg" alt="Profile Picture">
+            </div>
+
+            <div class="contact-info">
+                <p>Email: moradilak@ut.ac.ir | Phone: +98 935 217 8585</p>
+                <p>Address: Tehran, Valiasr Street</p>
+                <p>LinkedIn: linkedin.com/in/vahidmoradi</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">About Me</h2>
+                <p>Master's degree holder in Software Engineering with over 5 years of experience in web development and programming. Specialized in designing and implementing web-based systems using modern technologies. Strong expertise in front-end development with experience working with various frameworks.</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="experience-item">
+                    <div class="experience-title">Master of Science in Software Engineering</div>
+                    <div>University of Tehran</div>
+                    <div>Major: Software Engineering</div>
+                    <div>GPA: 17.5/20</div>
+                    <div class="experience-date">2019 - 2021</div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">Bachelor of Science in Software Engineering</div>
+                    <div>Shahid Rajaee Teacher Training University</div>
+                    <div>Major: Software Engineering</div>
+                    <div>GPA: 16.8/20</div>
+                    <div class="experience-date">2015 - 2019</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="experience-item">
+                    <div class="experience-title">Senior Front-end Developer</div>
+                    <div>IT Company</div>
+                    <div class="experience-date">2021 - Present</div>
+                    <ul>
+                        <li>Development and maintenance of React and Next.js projects</li>
+                        <li>Performance optimization and page load speed improvement</li>
+                        <li>Mentoring and training junior developers</li>
+                        <li>Implementation of microservices architecture for front-end</li>
+                        <li>Development of reusable components using TypeScript</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">Front-end Developer</div>
+                    <div>Digital Startup</div>
+                    <div class="experience-date">2019 - 2021</div>
+                    <ul>
+                        <li>UI development using React and TypeScript</li>
+                        <li>Authentication system implementation</li>
+                        <li>Development of reusable components</li>
+                        <li>SEO and website performance optimization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-list">
+                    <span class="skill-item">React</span>
+                    <span class="skill-item">Next.js</span>
+                    <span class="skill-item">TypeScript</span>
+                    <span class="skill-item">JavaScript</span>
+                    <span class="skill-item">HTML5</span>
+                    <span class="skill-item">CSS3</span>
+                    <span class="skill-item">Git</span>
+                    <span class="skill-item">REST API</span>
+                    <span class="skill-item">Redux</span>
+                    <span class="skill-item">Material-UI</span>
+                    <span class="skill-item">Tailwind CSS</span>
+                    <span class="skill-item">Node.js</span>
+                    <span class="skill-item">Webpack</span>
+                    <span class="skill-item">Jest</span>
+                    <span class="skill-item">Docker</span>
+                    <span class="skill-item">CI/CD</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleLanguage() {
+            const faContent = document.querySelector('.fa-content');
+            const enContent = document.querySelector('.en-content');
+            const button = document.querySelector('.language-switch');
+            const html = document.documentElement;
+
+            if (faContent.classList.contains('active')) {
+                faContent.classList.remove('active');
+                enContent.classList.add('active');
+                button.textContent = 'فارسی';
+                html.lang = 'en';
+                html.dir = 'ltr';
+            } else {
+                enContent.classList.remove('active');
+                faContent.classList.add('active');
+                button.textContent = 'English';
+                html.lang = 'fa';
+                html.dir = 'rtl';
+            }
+        }
+    </script>
+</body>
+</html>

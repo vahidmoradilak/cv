@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Mikaeili - AI Researcher & Data Scientist</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- GitHub Calendar CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css">
+    
+    <style>
+        .btn-linkedin {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #0077b5;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-weight: 500;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-linkedin:hover {
+            background-color: #005d8f;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .btn-linkedin i {
+            font-size: 1.1em;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-buttons a {
+                margin: 5px 0;
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">Ali Mikaeili</div>
+                <ul class="nav-links">
+                    <li><a href="#about" data-translate="about">About</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="#education" class="dropdown-trigger" data-translate="education">Education</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#education" data-translate="education">Education</a></li>
+                            <li><a href="#skills" data-translate="skills">Skills</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="#experience" class="dropdown-trigger" data-translate="work">Work</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#experience" data-translate="experience">Experience</a></li>
+                            <li><a href="#projects" data-translate="projects">Projects</a></li>
+                            <li><a href="#publications" data-translate="publications">Publications</a></li>
+                            <li><a href="#github" data-translate="github">GitHub</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#blog" data-translate="blog">Blog</a></li>
+                    <li><a href="#contact" data-translate="contact">Contact</a></li>
+                </ul>
+                <div class="toggle-container">
+                    <div class="lang-toggle" id="lang-toggle">
+                        <span>EN</span>
+                        <i class="fas fa-globe"></i>
+                        <div class="lang-dropdown">
+                            <div class="lang-option" data-lang="en">English</div>
+                            <div class="lang-option" data-lang="de">Deutsch</div>
+                            <div class="lang-option" data-lang="fa">فارسی</div>
+                        </div>
+                    </div>
+                    <div class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </div>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="about">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Ali Mikaeili</h1>
+                    <h2 data-translate="ai_researcher">AI Researcher & Data Scientist</h2>
+                    <p data-translate="masters_student">Master's Student in Artificial Intelligence and Robotics at University of Tehran</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary" data-translate="contact_me">Contact Me</a>
+                        <a href="Mikaeili_cv_final.pdf" class="btn btn-secondary" download data-translate="download_cv">Download CV</a>
+                        <a href="https://linkedin.com/in/mikaeiliali" target="_blank" class="btn btn-linkedin">
+                            <i class="fab fa-linkedin"></i> <span data-translate="connect_linkedin">Connect on LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Profile image -->
+                    <img src="ali.jpg" alt="Ali Mikaeili Profile Picture" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section education-experience-wrapper">
+        <div class="container">
+            <div class="education-experience-grid">
+                <div class="education-column" id="education">
+                    <h2 class="section-title" data-translate="education_title">Education</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>University of Tehran</h3>
+                                <h4 data-translate="ut_degree">Master of Science, Artificial Intelligence and Robotics</h4>
+                                <p class="timeline-date">2023 - Present</p>
+                                <p data-translate="ut_thesis">Thesis: Enhancing medical image Registration for Neurosurgery using Deep fusion algorithms</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Ardebil University</h3>
+                                <h4 data-translate="pnu_degree">Bachelor of Engineering, Computer Engineering</h4>
+                                <p class="timeline-date">2020 - 2023</p>
+                                <p data-translate="pnu_thesis">Thesis: Predicting Diabetes using Machine learning algorithms</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Ardebil University</h3>
+                                <h4 data-translate="farhangian_degree">Bachelor's in Educational Sciences</h4>
+                                <p class="timeline-date">2017 - 2021</p>
+                                <p data-translate="farhangian_thesis">Thesis: Studied human learning processes and development, combining knowledge of educational sciences.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-column" id="experience">
+                    <h2 class="section-title" data-translate="experience_title">Work Experience</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Max Planck Institute for Brain Research (MPIBR)</h3>
+                                <h4 data-translate="mpibr_position">Research Assistant, Dept. of Neural System (under supervision of Prof. Gilles Laurent)</h4>
+                                <p class="timeline-date">2024 - Present</p>
+                                <ul>
+                                    <li data-translate="mpibr_exp1">Designing a network for unsupervised synapse clustering based on morphological features using Contrastive learning.</li>
+                                    <li data-translate="mpibr_exp2">Designing a representation learning framework for Cell Classification using Vision Transformers.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Hamrahe Aval (MCI), Mobile Communication Company of Iran</h3>
+                                <h4 data-translate="mci_position">Data Analyst, Image Analysis Group, Research and Development Department</h4>
+                                <p class="timeline-date">2023 - Present</p>
+                                <ul>
+                                    <li data-translate="mci_exp1">Engaged in the development of Text-to-Speech (TTS) and Emotion Speech Recognition (ESR) projects for the GITEX exhibition.</li>
+                                    <li data-translate="mci_exp2">Working on architectures for Persian Text to speech models.</li>
+                                    <li data-translate="mci_exp3">Product Manager for the Persian-Interactive Dog Robot Project.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>University of Tehran</h3>
+                                <h4 data-translate="ut_position">Teaching Assistant, Dept. of Computer Science & Electrical Engineering</h4>
+                                <p class="timeline-date">2023 - 2024</p>
+                                <ul>
+                                    <li data-translate="ut_exp1">Head of Four Research Teams in AI-Driven Medical Imaging and Data Projects.</li>
+                                    <li data-translate="ut_exp2">Assisted in teaching Statistical Inference (Dr. Abolghasemi Dehaghani).</li>
+                                    <li data-translate="ut_exp3">Assisted in teaching Artificial Intelligence (Prof. Mohammad Khoshnevisan).</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Ardebil University</h3>
+                                <h4 data-translate="pnu_position">Teaching Assistant, Dept. of Computer Science & Engineering</h4>
+                                <p class="timeline-date">2020 - 2023</p>
+                                <ul>
+                                    <li data-translate="pnu_exp1">Assisted in teaching Data Structures and Algorithms.</li>
+                                    <li data-translate="pnu_exp2">Contributed to the Artificial Intelligence Course.</li>
+                                    <li data-translate="pnu_exp3">Supported the Operating System Course.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Education</h3>
+                                <h4 data-translate="moe_position">Elementary School Teacher</h4>
+                                <p class="timeline-date">2021 - 2023</p>
+                                <ul>
+                                    <li data-translate="moe_exp1">Taught first and second grades (2021) and fifth and sixth grades (2022).</li>
+                                    <li data-translate="moe_exp2">Developed and implemented engaging lesson plans.</li>
+                                    <li data-translate="moe_exp3">Fostered a positive and inclusive classroom environment.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-title" data-translate="skills_title">Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3 data-translate="ai">AI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">LLM</span>
+                        <span class="skill-tag">RAG</span>
+                        <span class="skill-tag">Bert</span>
+                        <span class="skill-tag">GAN</span>
+                        <span class="skill-tag">Transformers</span>
+                        <span class="skill-tag">Diffusion models</span>
+                        <span class="skill-tag">Image processing</span>
+                        <span class="skill-tag">Digital Twin</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-translate="programming_languages">Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Kotlin</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">C++</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-translate="ml_tools">Machine Learning Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Keras</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">Scikit-Learn</span>
+                        <span class="skill-tag">Matplotlib</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-translate="other_skills">Other Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">LaTeX</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-translate="languages">Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">English (Advanced)</span>
+                        <span class="skill-tag">Persian (Native)</span>
+                        <span class="skill-tag">Azerbaijani (Native)</span>
+                        <span class="skill-tag">Turkish (Advanced)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="publications">
+        <div class="container">
+            <h2 class="section-title" data-translate="publications_title">Publications</h2>
+            <div class="view-all-publications">
+                <a href="https://scholar.google.com/citations?hl=en&user=U46MSycAAAAJ" target="_blank" class="btn btn-secondary">
+                    <i class="fas fa-graduation-cap"></i> <span data-translate="view_all_publications">View All Publications on Google Scholar</span>
+                </a>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-content">
+                        <h3 data-translate="pub1_title">Attention-Based Segmentation of Brain Tumors Using Feature Level Fusion and UNet Architecture</h3>
+                        <p>Ali Mikaeili Barzili, Behzad Moshiri</p>
+                        <p><em data-translate="pub1_details">2025 Fifth National and the First International Conference on Applied Research in Electrical Engineering (AREE), February 4, 2025.</em></p>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10880261" target="_blank" class="link" data-translate="view_publication">View Publication on IEEE Xplore</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3 data-translate="pub2_title">Review of the Role of Internet of Things in Healthcare</h3>
+                        <p>Mikaeili Barzili, Ali & Azimi Moghadam, Ramin, 2021</p>
+                        <p><em data-translate="pub2_details">Twelfth National Conference on Computer Science and Information Technology Engineering, Babol</em></p>
+                        <a href="https://civilica.com/doc/1224707" target="_blank" class="link" data-translate="view_publication">View Publication</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title" data-translate="projects_title">Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://placehold.co/600x400/0077cc/ffffff?text=Water+Bodies+Segmentation" alt="Water Bodies Segmentation">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="project1_title">SAM on Water Bodies Dataset</h3>
+                        <p data-translate="project1_desc">Implemented the SAM (Segment Anything Model) on the Water Bodies Dataset, achieving precise segmentation results for diverse water bodies.</p>
+                        <div class="tags">
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Segmentation</span>
+                            <span class="tag">Deep Learning</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://placehold.co/600x400/005599/ffffff?text=Mental+Health+Analysis" alt="Mental Health Analysis">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="project2_title">Suicidal Thoughts Prediction</h3>
+                        <p data-translate="project2_desc">Developed a predictive model for identifying suicidal thoughts in social network users based on their tweet content, contributing to mental health awareness and intervention efforts.</p>
+                        <div class="tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">Classification</span>
+                            <span class="tag">Mental Health</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://placehold.co/600x400/3366cc/ffffff?text=Speech+Emotion+Recognition" alt="Speech Emotion Recognition">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="project3_title">Speech Emotion Recognition</h3>
+                        <p data-translate="project3_desc">Engineered a robust Speech Emotion Recognition system using the Shemo Persian speech emotion detection database, enabling accurate classification of emotional states from speech signals.</p>
+                        <div class="tags">
+                            <span class="tag">Audio Processing</span>
+                            <span class="tag">Emotion Recognition</span>
+                            <span class="tag">Persian</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://placehold.co/600x400/2255aa/ffffff?text=Persian+NLP" alt="Persian NLP">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="project4_title">BERT for Persian Language</h3>
+                        <p data-translate="project4_desc">Conducted fine-tuning of the BERT model tailored for the Persian language, enhancing its performance in natural language processing tasks specific to Persian text.</p>
+                        <div class="tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">BERT</span>
+                            <span class="tag">Persian</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://placehold.co/600x400/4477dd/ffffff?text=GAN+for+MNIST" alt="GAN Image Generation">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="project5_title">GAN for MNIST</h3>
+                        <p data-translate="project5_desc">Employed Generative Adversarial Networks (GAN) to generate a synthetic version of the MNIST Dataset, facilitating research and development in computer vision and machine learning.</p>
+                        <div class="tags">
+                            <span class="tag">GAN</span>
+                            <span class="tag">Image Generation</span>
+                            <span class="tag">Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://placehold.co/600x400/116688/ffffff?text=Credit+Card+Fraud" alt="Fraud Detection">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="project6_title">Credit Card Fraud Detection</h3>
+                        <p data-translate="project6_desc">Implemented Adaptive Synthetic Sampling techniques to improve the effectiveness of Credit Card Fraud Detection, enhancing the security measures in financial transactions.</p>
+                        <div class="tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Fraud Detection</span>
+                            <span class="tag">Financial Security</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://placehold.co/600x400/339999/ffffff?text=VAE+Generation" alt="VAE Image Generation">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="project7_title">ControlVAE</h3>
+                        <p data-translate="project7_desc">Contributed to the ControlVAE project by generating pictures using Control VAE, advancing research in variational autoencoders and image generation.</p>
+                        <div class="tags">
+                            <span class="tag">VAE</span>
+                            <span class="tag">Image Generation</span>
+                            <span class="tag">Generative Models</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="github">
+        <div class="container">
+            <h2 class="section-title" data-translate="github_title">GitHub Contributions</h2>
+            <div class="github-content">
+                <div class="github-calendar-container">
+                    <h3 data-translate="github_activity">My Coding Activity</h3>
+                    <!-- GitHub contribution calendar will be loaded here -->
+                    <div class="calendar"></div>
+                </div>
+                <div class="github-repos">
+                    <h3 data-translate="github_repos">Featured Repositories</h3>
+                    <div class="repo-cards">
+                        <!-- Repository cards will be displayed here -->
+                        <div class="repo-card" id="repo1"></div>
+                        <div class="repo-card" id="repo2"></div>
+                        <div class="repo-card" id="repo3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="blog">
+        <div class="container">
+            <h2 class="section-title" data-translate="blog_title">Blog & Articles</h2>
+            <div class="blog-container">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=880&auto=format&fit=crop" alt="AI in Healthcare" class="blog-thumbnail">
+                        <div class="blog-category"><span data-translate="ai_healthcare">AI in Healthcare</span></div>
+                    </div>
+                    <div class="blog-content">
+                        <h3 data-translate="blog1_title">Advancing Medical Imaging with Deep Learning</h3>
+                        <p data-translate="blog1_excerpt">Exploring how deep learning techniques are revolutionizing medical image analysis, improving diagnosis accuracy and treatment planning.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">March 15, 2024</span>
+                            <a href="#" class="blog-read-more" data-translate="read_more">Read More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1555952494-efd681c7e3f9?q=80&w=880&auto=format&fit=crop" alt="NLP Advancements" class="blog-thumbnail">
+                        <div class="blog-category"><span data-translate="nlp">Natural Language Processing</span></div>
+                    </div>
+                    <div class="blog-content">
+                        <h3 data-translate="blog2_title">Persian Language Processing: Challenges and Solutions</h3>
+                        <p data-translate="blog2_excerpt">Discussing the unique challenges in Persian NLP and recent advances in transformer models adapted for Persian language.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">February 20, 2024</span>
+                            <a href="#" class="blog-read-more" data-translate="read_more">Read More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=880&auto=format&fit=crop" alt="Robotics Research" class="blog-thumbnail">
+                        <div class="blog-category"><span data-translate="robotics">Robotics</span></div>
+                    </div>
+                    <div class="blog-content">
+                        <h3 data-translate="blog3_title">The Future of Interactive Robotics in Education</h3>
+                        <p data-translate="blog3_excerpt">Analyzing how interactive robots can enhance educational experiences and the role of AI in creating more adaptive learning companions.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">January 5, 2024</span>
+                            <a href="#" class="blog-read-more" data-translate="read_more">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="blog-view-all">
+                <a href="#" class="btn btn-secondary" data-translate="view_all_articles">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title" data-translate="contact_title">Contact Me</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>AmirAbad, Tehran, Iran</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p><a href="mailto:Mikaeili.ali@ut.ac.ir">Mikaeili.ali@ut.ac.ir</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p><a href="tel:+989146413108">(+98)914-641-3108</a></p>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name" data-translate="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-translate="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-translate="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-translate="send_message">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Ali Mikaeili. <span data-translate="rights_reserved">All Rights Reserved.</span></p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/mikaeiliali" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/alim98" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://scholar.google.com/citations?hl=en&user=U46MSycAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/script.js"></script>
+    
+    <!-- GitHub Calendar JavaScript -->
+    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+    
+    <!-- GitHub Integration Script -->
+    <script src="js/github-integration.js"></script>
+
+    <script>
+    const contactForm = () => {
+        const form = document.querySelector('.contact-form');
+        
+        if (form) {
+            // Update form action to point to a service like Formspree
+            form.setAttribute('action', 'https://formspree.io/f/your-formspree-id');
+            form.setAttribute('method', 'POST');
+        }
+    };
+    </script>
+</body>
+</html> 
